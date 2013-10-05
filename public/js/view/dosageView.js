@@ -48,12 +48,13 @@ define([
 				timeTaken= "00:00:00";
 				content = timeTaken + "Taken";
 				dosebtn = i;
-				var medicationInfo={dosebtn:dosebtn, doses:"Drug1 x 1; Drug2 x 2",doseNo:i,buttonType:"btn-primary", content:content};
+				var medicationInfo={dosebtn:dosebtn, doses:"Drug1 x 1; Drug2 x 2",doseNo:i,buttonType:"btn-danger", content:content};
 				todayDoses.append(this.template(medicationInfo));
 			};
 
 			//Show pills record
 			var that = this;
+			var numA = 0; //A fake indicator
 			this.socket = io.connect("127.0.0.1:3000");	
 			this.socket.on("connect",function(){
 				console.log("Client socket.io is establisted");
@@ -66,11 +67,35 @@ define([
 					//console.log("Get the data:"+JSON.stringify(drug_schedule.length));
 					that.showPillsTakingRecord(drug_schedule,adherenceEvent);				
 				});
+
+				//Get the singnal when a drug prescrition is finished
+				that.socket.on("deleteA",function(result){
+					if (!numA>0){
+						//turn off the button
+						if (result=="000000"){
+							$("button[name=0]").removeClass("btn-danger");
+							numA++;
+						}else if(result=="111111"){
+							$("button[name=1]").removeClass("btn-danger");
+						}else if(result="222222"){
+							$("button[name=2]").removeClass("btn-danger");
+						}else if(result="333333"){
+							$("button[name=3]").removeClass("btn-danger");
+						}else if(result="444444"){
+							$("button[name=4]").removeClass("btn-danger");
+						};
+						that.showAlert("A prescription is finished!");
+					}
+				});
 			});
 		},
 
 		events: {
 
+		},
+
+		showAlert:function(message){
+			$('#alertNotice').html('<div class="alert"><a class="close" data-dismiss="alert">×</a><span>'+message+'</span></div>');
 		},
 
 		//For rendering a view

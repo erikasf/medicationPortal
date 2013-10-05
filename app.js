@@ -54,6 +54,13 @@ var connection = mysql.createConnection({
 	password : '',
 });
 
+var options = {
+		host: 'stark-bastion-5706.herokuapp.com',
+		port: 80,
+		path: '/'
+};
+
+
 io.sockets.on("connection",function(socket){
 	socket.on("getAdherenceRecord",function(){
 		connection.connect(function(err) {
@@ -71,5 +78,24 @@ io.sockets.on("connection",function(socket){
 
 		});
 	});
+	
+	var intervalID = setInterval(function(){
+		console.log("Calling now...");
+		http.get(options, function(resp){
+			resp.setEncoding('utf8');
+			resp.on("data",function(result){
+				console.log("temp result code: "+result);
+				if (result){
+					socket.emit("deleteA",result);
+				};				
+			});
+		}).on("error", function(e){
+			console.log("Got error: " + e.message);
+		});		
+	},2000);
 
 });
+
+
+
+
