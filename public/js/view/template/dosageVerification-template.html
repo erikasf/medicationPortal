@@ -1,0 +1,13 @@
+<tr>
+  <td><%=doseNo%></td>
+  <td>
+    <button class='btn <%=buttonType%>' data-toggle="collapse" data-target="#<%=doseNo%>" name=<%=doseNo%>><%=content%></button>
+  </td>
+  <td> 
+    <div id="<%=doseNo%>" class="collapse"> 
+    <table class="table table-striped table-hover dosageList">
+      <td><%=doses%></td>
+    </table>
+    </div>
+  </td>
+</tr>

@@ -1,5 +1,22 @@
 extends layout
 
 block content
-  h1 Welcome to MemoreX
+  div(class="container-fluid mainCenter")
+    div(class="row-fluid")
+      div(class="span2")
+        div#patientInfo
+          label Today Date:
+            span(class="date")
+          label Current Time:
+            span(class="clock")
+          label Device status:
+            span(class="deviceStatus")   
+              button(class="btn" id="deviceStatusIndicator")
+      div(class="span8")
+          table.todayDoses
+            
+  <!--Script-->
+  script(src="/js/lib/jquery-min.js")
+  script(src="/js/lib/common.js")
+      
   

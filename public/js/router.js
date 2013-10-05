@@ -20,7 +20,7 @@ define([
 
 		// No matching route, do nothing
 		defaultAction: function(actions){
-			console.log('There is no route:', actions);
+			Main.initializeIndex();
 		},
 	});
 

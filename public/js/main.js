@@ -7,15 +7,23 @@ define([
         'jquery',     
         'underscore', 
         'backbone',
+        'view/dosageView',
 
-        ], function($, _, Backbone){
+        ], function($, _, Backbone,DosageView){
 	var initialize = function(){
 		console.log("Success!");
+
+	}
+	
+	var initializeIndex = function(){
+		console.log("Initializing index page");
+		new DosageView();
 	}
 
 
 	return {
-		initialize: initialize
+		initialize: initialize,
+		initializeIndex: initializeIndex
 	};
 
 });
