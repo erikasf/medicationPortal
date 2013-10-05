@@ -43,12 +43,18 @@ define([
 
 			//To display the Today medication; indicate whether it has been done or not
 			var todayDoses = $(".todayDoses");
+			var doses = [{doses:"Drug A (1), drug B (1), drug C (1), drug D(4)"},
+			            {doses:"Drug A (1), drug B (1), drug C (1)"},
+			            {doses:"Drug A (1), drug B (1)"},
+			            {doses:"Drug A (1)"},
+			            {doses:"Drug A (1), drug B (1), drug D(4)"},
+			            ]
 			todayDoses.append("<th>No. </th><th>Dosage Time</th>");
 			for (var i=0;i<5;i++){
 				timeTaken= "00:00:00";
 				content = timeTaken + "Taken";
 				dosebtn = i;
-				var medicationInfo={dosebtn:dosebtn, doses:"Drug1 x 1; Drug2 x 2",doseNo:i,buttonType:"btn-danger", content:content};
+				var medicationInfo={dosebtn:dosebtn, doses:doses[i].doses,doseNo:i,buttonType:"btn-danger", content:content};
 				todayDoses.append(this.template(medicationInfo));
 			};
 
