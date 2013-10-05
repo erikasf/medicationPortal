@@ -36,6 +36,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.post('/', routes.response);
 app.get('/about', about.show);
 app.get('/record', record.show);
 
