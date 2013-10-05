@@ -4,6 +4,10 @@
 	text-align:center;
 }
 
+#patientInfo{
+	font-size: 14px;
+};
+
 .cell-padded-notTaken {
   background-color: #f89406;
   border: 1px solid #DDD;
