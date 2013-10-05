@@ -1,13 +1,14 @@
 {
-  "name": "medication_portal",
+  "name": "LabBook",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "3.4.0",
+    "express": "3.3.4",
     "jade": "*",
-    "node-mysql":"*",
+    "socket.io": "*",
+    "node-mysql": "*"
   }
 }
