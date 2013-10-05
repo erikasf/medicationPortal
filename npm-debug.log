@@ -1,0 +1,116 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@1.3.11
+3 info using node@v0.10.20
+4 verbose node symlink /usr/bin/node
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/home/johnny5550822/workspace/medication_portal',
+6 verbose install   [ 'express', 'jade' ] ]
+7 info preinstall medication_portal@0.0.1
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'express@3.4.0', null ]
+10 verbose cache add name=undefined spec="express@3.4.0" args=["express@3.4.0",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'express@3.4.0',
+11 verbose parsed url   path: 'express@3.4.0',
+11 verbose parsed url   href: 'express@3.4.0' }
+12 verbose cache add name="express" spec="3.4.0" args=["express","3.4.0"]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: '3.4.0',
+13 verbose parsed url   path: '3.4.0',
+13 verbose parsed url   href: '3.4.0' }
+14 verbose addNamed [ 'express', '3.4.0' ]
+15 verbose addNamed [ '3.4.0', '3.4.0' ]
+16 verbose cache add [ 'jade@*', null ]
+17 verbose cache add name=undefined spec="jade@*" args=["jade@*",null]
+18 verbose parsed url { protocol: null,
+18 verbose parsed url   slashes: null,
+18 verbose parsed url   auth: null,
+18 verbose parsed url   host: null,
+18 verbose parsed url   port: null,
+18 verbose parsed url   hostname: null,
+18 verbose parsed url   hash: null,
+18 verbose parsed url   search: null,
+18 verbose parsed url   query: null,
+18 verbose parsed url   pathname: 'jade@*',
+18 verbose parsed url   path: 'jade@*',
+18 verbose parsed url   href: 'jade@*' }
+19 verbose cache add name="jade" spec="*" args=["jade","*"]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: '*',
+20 verbose parsed url   path: '*',
+20 verbose parsed url   href: '*' }
+21 verbose addNamed [ 'jade', '*' ]
+22 verbose addNamed [ null, '*' ]
+23 silly lockFile 86194427-express-3-4-0 express@3.4.0
+24 verbose lock express@3.4.0 /home/johnny5550822/.npm/86194427-express-3-4-0.lock
+25 silly lockFile ad03ed78-jade jade@*
+26 verbose lock jade@* /home/johnny5550822/.npm/ad03ed78-jade.lock
+27 silly addNameRange { name: 'jade', range: '*', hasData: false }
+28 verbose url raw express/3.4.0
+29 verbose url resolving [ 'https://registry.npmjs.org/', './express/3.4.0' ]
+30 verbose url resolved https://registry.npmjs.org/express/3.4.0
+31 info trying registry request attempt 1 at 23:29:04
+32 http GET https://registry.npmjs.org/express/3.4.0
+33 verbose url raw jade
+34 verbose url resolving [ 'https://registry.npmjs.org/', './jade' ]
+35 verbose url resolved https://registry.npmjs.org/jade
+36 info trying registry request attempt 1 at 23:29:04
+37 verbose etag "6KWAD54VES0Z5MFYE8R4VOARE"
+38 http GET https://registry.npmjs.org/jade
+39 http 200 https://registry.npmjs.org/express/3.4.0
+40 silly registry.get cb [ 200,
+40 silly registry.get   { vary: 'Accept',
+40 silly registry.get     server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+40 silly registry.get     etag: '"6CGAPLRNIFJ2VVZJMZP80P2P7"',
+40 silly registry.get     date: 'Sat, 05 Oct 2013 06:28:58 GMT',
+40 silly registry.get     'content-type': 'application/json',
+40 silly registry.get     'content-length': '7515' } ]
+41 silly lockFile c97509f2-js-org-express-express-3-4-0-tgz https://registry.npmjs.org/express/-/express-3.4.0.tgz
+42 verbose lock https://registry.npmjs.org/express/-/express-3.4.0.tgz /home/johnny5550822/.npm/c97509f2-js-org-express-express-3-4-0-tgz.lock
+43 verbose addRemoteTarball [ 'https://registry.npmjs.org/express/-/express-3.4.0.tgz',
+43 verbose addRemoteTarball   '6ed289da0d5f55ac30997cf832e5fc36f784071e' ]
+44 silly lockFile c97509f2-js-org-express-express-3-4-0-tgz https://registry.npmjs.org/express/-/express-3.4.0.tgz
+45 silly lockFile c97509f2-js-org-express-express-3-4-0-tgz https://registry.npmjs.org/express/-/express-3.4.0.tgz
+46 silly lockFile 86194427-express-3-4-0 express@3.4.0
+47 silly lockFile 86194427-express-3-4-0 express@3.4.0
+48 error Error: EACCES, mkdir '/home/johnny5550822/tmp/npm-22067-zPfalEJf'
+48 error  { [Error: EACCES, mkdir '/home/johnny5550822/tmp/npm-22067-zPfalEJf']
+48 error   errno: 3,
+48 error   code: 'EACCES',
+48 error   path: '/home/johnny5550822/tmp/npm-22067-zPfalEJf' }
+49 error Please try running this command again as root/Administrator.
+50 error System Linux 3.5.0-41-generic
+51 error command "/usr/bin/node" "/usr/bin/npm" "install"
+52 error cwd /home/johnny5550822/workspace/medication_portal
+53 error node -v v0.10.20
+54 error npm -v 1.3.11
+55 error path /home/johnny5550822/tmp/npm-22067-zPfalEJf
+56 error code EACCES
+57 error errno 3
+58 error stack Error: EACCES, mkdir '/home/johnny5550822/tmp/npm-22067-zPfalEJf'
+59 verbose exit [ 3, true ]
