@@ -4,8 +4,22 @@
 	text-align:center;
 }
 
+.cell-padded-notTaken {
+  background-color: #f89406;
+  border: 1px solid #DDD;
+}
+
+.cell-padded-taken {
+  background-color: #51a351;
+  border: 1px solid #DDD;
+}
+
 .todayDoses td{
 	 padding:5px;
+}
+
+.center{
+	text-align: center;
 }
 
 .mainCenter{
