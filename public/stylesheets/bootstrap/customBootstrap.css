@@ -8,6 +8,11 @@
 	 padding:5px;
 }
 
+.mainCenter{
+	margin-left:auto;
+	/*margin-right:auto;*/
+}
+
 .dosageList{
 	margin-bottom:0px;
 }
@@ -16,7 +21,7 @@
 	float: left;
 }
 
-.container{
+.container, .container-fluid{
 	width: 100%;
 }
 

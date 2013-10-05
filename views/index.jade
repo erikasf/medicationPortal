@@ -3,7 +3,8 @@ extends layout
 block content
   div(class="container-fluid mainCenter")
     div(class="row-fluid")
-      div(class="span2")
+      div(class="span3 offset3")
+        h2 General Info
         div#patientInfo
           label Today Date:
             span(class="date")
@@ -12,7 +13,8 @@ block content
           label Device status:
             span(class="deviceStatus")   
               button(class="btn" id="deviceStatusIndicator")
-      div(class="span8")
+      div(class="span6")
+          h2 Today Doses
           table.todayDoses
             
   <!--Script-->
