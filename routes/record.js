@@ -3,5 +3,5 @@
  */
 
 exports.show = function(req, res){
-  res.render("record");
+  res.render("record",{title:"Patient Drugs Record"});
 };

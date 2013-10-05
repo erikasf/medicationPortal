@@ -4,5 +4,5 @@
  */
 
 exports.show = function(req, res){
-  res.send("This is a record");
+  res.render("about",{title:"About Us"});
 };
