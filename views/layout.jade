@@ -5,3 +5,13 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block content
+    
+    
+    <!--JS-->
+    script(src="/js/lib/jquery-min.js")
+        
+    <!--Socket.io-->
+    script(src="/socket.io/socket.io.js")
+    
+    <!--bootstrap.js is being run when requireJS is first loaded-->
+    script(type="text/javascript", data-main="/js/bootstrap", src="/js/lib/requirejs/require-min.js").

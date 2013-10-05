@@ -21,6 +21,11 @@ app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
+
+//session storage; placed before router
+app.use(express.cookieParser());
+app.use(express.session({secret: 'HABCD12365!'}));
+
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -34,9 +39,12 @@ app.get('/', routes.index);
 app.get('/about', about.show);
 app.get('/record', record.show);
 
-http.createServer(app).listen(app.get('port'), function(){
+var server = http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+// socket io connection
+var io = require("socket.io").listen(server);
 
 //Connect to the database
 var connection = mysql.createConnection({
