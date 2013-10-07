@@ -1,3 +1,0 @@
-/**
-* Customize bootstrap related javascript
-*/

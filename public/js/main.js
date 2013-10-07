@@ -3,27 +3,22 @@
  */
 
 define([
-        // These are path alias that we configured in our bootstrap
-        'jquery',     
-        'underscore', 
-        'backbone',
-        'view/dosageView',
+// These are path alias that we configured in our bootstrap
+'jquery', 'underscore', 'backbone', 'view/dosageView',
 
-        ], function($, _, Backbone,DosageView){
-	var initialize = function(){
-		console.log("Success!");
+], function($, _, Backbone, DosageView) {
+	//	var initialize = function(){
+	//		console.log("Success!");	// for debugging
+	//	}
 
-	}
-	
-	var initializeIndex = function(){
+	var initializeIndex = function() {
 		console.log("Initializing index page");
-		new DosageView();
+		new DosageView();	// To create the view of the entire application
 	}
-
 
 	return {
-		initialize: initialize,
-		initializeIndex: initializeIndex
+//		initialize : initialize, for debugging
+		initializeIndex : initializeIndex
 	};
 
 });

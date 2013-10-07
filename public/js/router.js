@@ -1,34 +1,31 @@
-define([
-        'jquery',
-        'underscore',
-        'backbone',
-        'main'
-        
-        ], function($, _, Backbone,Main){
+/**
+ * Route control for our app
+ */
+
+define([ 'jquery', 'underscore', 'backbone', 'main'
+
+], function($, _, Backbone, Main) {
 	var AppRouter = Backbone.Router.extend({
-		routes: {
-			// Define some URL routes
-			'record': 'showRecordView',
+		routes : {
+//			// Define some URL routes
+//			'record' : 'showRecordView',	//for debugging
 
 			// Default
-			'*actions': 'defaultAction',
+			'*actions' : 'defaultAction',
 		},
 
-		showRecordView: function(){
-			Main.initialize();
-		},
-
-		// No matching route, do nothing
-		defaultAction: function(actions){
-			Main.initializeIndex();
+		defaultAction : function(actions) {
+			Main.initializeIndex();	// to initialize our page
 		},
 	});
 
-	var initialize = function(){
+	var initialize = function() {
 		var app_router = new AppRouter();
-		Backbone.history.start({pushState: true});	//Backbone listen to hash changes since this statement; pushState has to be true in order to work
+		Backbone.history.start({
+			pushState : true
+		}); //Backbone listen to hash changes since this statement; pushState has to be true in order to work.
 	};
 	return {
-		initialize: initialize
+		initialize : initialize
 	};
 });

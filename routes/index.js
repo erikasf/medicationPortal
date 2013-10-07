@@ -1,12 +1,10 @@
-
 /*
- * GET home page.
+ * The homepage, which is also the only page in this portal. For simple usage.
  */
 
-exports.index = function(req, res){
-  res.render('index', { title: 'MemoreX',patientName: "Joseph Wong" });
-};
-
-exports.response = function(req,res){
-    res.send("232323");	// 200 means the request is successful. The backbone is expected to have a JSON response object and therefore a dump object is created.
+exports.index = function(req, res) {
+	res.render('index', {
+		title : 'Medicine Portal',
+		patientName : "Joseph Wong"
+	});
 };
