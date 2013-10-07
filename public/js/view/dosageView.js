@@ -84,23 +84,27 @@ define([
 					if (!numA>0){
 						//turn off the button
 						if (result=="000000"){
+							that.showAlert("A prescription is finished!");
 							$("button[name=0]").removeClass("btn-danger");
 							$("button[name=0]").addClass("btn-success");
 							numA++;
 						}else if(result=="111111"){
+							that.showAlert("A prescription is finished!");
 							$("button[name=1]").removeClass("btn-danger");
 							$("button[name=1]").addClass("btn-success");
-						}else if(result="222222"){
+						}else if(result=="222222"){
+							that.showAlert("A prescription is finished!");
 							$("button[name=2]").removeClass("btn-danger");
 							$("button[name=2]").addClass("btn-success");
-						}else if(result="333333"){
+						}else if(result=="333333"){
+							that.showAlert("A prescription is finished!");
 							$("button[name=3]").removeClass("btn-danger");
 							$("button[name=3]").addClass("btn-success");
-						}else if(result="444444"){
+						}else if(result=="444444"){
+							that.showAlert("A prescription is finished!");
 							$("button[name=4]").removeClass("btn-danger");
 							$("button[name=4]").addClass("btn-success");
 						};
-						that.showAlert("A prescription is finished!");
 					}
 				});
 			});
