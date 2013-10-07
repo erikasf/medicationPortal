@@ -1,7 +1,7 @@
 # Medication Portal for an innovative drug holder
 
 ## Objective
-A web portal to illustrate how to build an application using Node.js, express.js , backbone.js, socket.io.js and twitter bootstrap.
+A web portal to illustrate how to build an simple device-interaction application using various technology: Node.js, express.js , backbone.js, socket.io.js, twitter bootstrap, and mysql.
 
 
 ## Usage
