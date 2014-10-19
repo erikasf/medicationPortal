@@ -1,4 +1,4 @@
-# 2013 UCLA Inventathon---Medication Portal for an innovative drug holder
+# The 1st Annual Inventathon(2013,UCLA)---Medication Portal for an innovative drug holder
 (honorable prize among 13 teams)
 
 ## Objective
