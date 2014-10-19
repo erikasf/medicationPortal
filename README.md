@@ -1,5 +1,5 @@
 # Medication Portal for an innovative drug holder
-(honorable prize)
+(honorable prize among 13 teams)
 
 ## Objective
 A web portal to illustrate how to build an simple device-interaction application using various technology: Node.js, express.js , backbone.js, socket.io.js, twitter bootstrap, require.js and mysql.
